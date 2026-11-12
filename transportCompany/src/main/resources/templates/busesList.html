@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Homepage</title>
+    </head>
+    <body>
+        <h1>Buses List</h1>
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>company</th>
+                <th>hp</th>
+                <th>licensePlate</th>
+                <th>numSeats</th>
+                <th>powerSupply</th>
+            </tr>
+            <tr th:each="bus: ${bus}">
+                <td th:text="${bus.getId()}">id</td>
+                <td th:text="${bus.getCompany()}">company</td>
+                <td th:text="${bus.getHp()}">hp</td>
+                <td th:text="${bus.getLicensePlate()}">licensePlate</td>
+                <td th:text="${bus.getNumSeats()}">numSeats</td>
+                <td th:text="${bus.getPowerSupply()}">powerSupply</td>
+                <td>
+                    <form th:action = "@{/bus/delete/{id}(id=${bus.id})}" method="post">
+                        <input type = "submit" value="delete bus"><br>
+                    </form>
+                </td>
+                <td>
+                    <form th:action = "@{/bus/update/{id}(id=${bus.id})}" method="get">
+                        <input type = "submit" value="update bus"><br>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <p><strong> Fill the form fields below to create a new bus</strong></p>
+        <form action="/bus" th:action="@{/bus}" method="post">
+            <fieldset>
+                <label for="cname">Company</label>
+                <input type="text" id="cname" name="company"><br>
+                <label for="hname">HP</label>
+                <input type="text" id="hname" name="hp"><br>
+                <label for="lname">License plate</label>
+                <input type="text" id="lname" name="licensePlate"><br>
+                <label for="nsname">Num seats</label>
+                <input type="text" id="nsname" name="numSeats"><br>
+                <label for="psname">Power supply</label>
+                <input type="text" id="psname" name="powerSupply"><br>
+                <input type="submit" value="create Bus"><br><br>
+            </fieldset>
+        </form>
+        <br>
+        <a href="busesList.html" th:href="@{/bus}">Home</a>
+    </body>
+</html>

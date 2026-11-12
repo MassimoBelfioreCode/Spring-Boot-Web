@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+    <head>
+        <title> Homepage</title>
+    </head>
+    <body>
+        <h1>Consoles List</h1>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>price</th>
+                <th>color</th>
+                <th>availability</th>
+                <th>state</th>
+            </tr>
+            <tr th:each="console: ${console}">
+                <td th:text="${console.getId()}">id</td>
+                <td th:text="${console.getName()}">name</td>
+                <td th:text="${console.getPrice()}">price</td>
+                <td th:text="${console.getColor()}">color</td>
+                <td th:text="${console.getAvailability()}">availability</td>
+                <td th:text="${console.getState()}">state</td>
+                <td>
+                    <form th:action="@{/console/delete/{id}(id=${console.getId()})}" method = "post">
+                        <input type = "submit" value="delete">
+                    </form>
+                </td>
+                <td>
+                    <form th:action="@{/console/update/{id}(id=${console.getId()})}" method = "get">
+                        <input type = "submit" value="update">
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <p><strong>Fill the form fields below to create a new console</strong></p>
+        <form action="/console" th:action="@{/console}" method="post">
+            <fieldset>
+                <label for="nname">Name</label>
+                <input type = "text" id="nname" name="name"><br>
+                <label for="pname">Price</label>
+                <input type = "text" id="pname" name="price"><br>
+                <label for="cname">Color</label>
+                <input type = "text" id="cname" name="color"><br>
+                <label for="aname">Availability</label>
+                <input type = "text" id="aname" name="availability"><br>
+                <label for="sname">State</label>
+                <select id="sname" name="state">
+                    <option value="NEW">NEW</option>
+                    <option value="USED">USED</option>
+                    <option value="AS_NEW">AS_NEW</option>
+                </select><br>
+                <input type="submit" value="create console"><br><br>
+            </fieldset>
+        </form>
+        
+        <br>
+        <a href="consoles.html" th:href="@{/console}">Home</a><br>
+    </body>
+</html>

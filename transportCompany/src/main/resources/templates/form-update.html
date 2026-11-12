@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.com">
+    <body>
+        <h1>UPDATE BUS</h1>
+
+        <p><strong> Fill the form fields below to update the bus</strong></p>
+        <form action="/bus" th:action="@{/bus/{id}(id=${bus.id})}" method="post">
+            <fieldset>
+                <label for="cname">Company</label>
+                <input type="text" id="cname" name="company"><br>
+                <label for="hname">HP</label>
+                <input type="text" id="hname" name="hp"><br>
+                <label for="lname">License plate</label>
+                <input type="text" id="lname" name="licensePlate"><br>
+                <label for="nsname">Num seats</label>
+                <input type="text" id="nsname" name="numSeats"><br>
+                <label for="psname">Power supply</label>
+                <input type="text" id="psname" name="powerSupply"><br>
+                <input type="submit" value="save Bus"><br><br>
+            </fieldset>
+        </form>
+    </body>
+</html>

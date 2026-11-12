@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.com">
+    <head>
+        <title>Second Page</title>
+    </head>
+    <body>
+        <h1>Update Console</h1>
+        <br>
+        <p><strong>Fill the form fields below to update the console</strong></p>
+        <form action="/console" th:action="@{/console/{id}(id=${console.id})}" method="post">
+            <fieldset>
+                <label for="nname">Name</label>
+                <input type = "text" id="nname" name="name"><br>
+                <label for="pname">Price</label>
+                <input type = "text" id="pname" name="price"><br>
+                <label for="cname">Color</label>
+                <input type = "text" id="cname" name="color"><br>
+                <label for="aname">Availability</label>
+                <input type = "text" id="aname" name="availability"><br>
+                <label for="sname">State</label>
+                <select id="sname" name="state">
+                    <option value="NEW">NEW</option>
+                    <option value="USED">USED</option>
+                    <option value="AS_NEW">AS_NEW</option>
+                </select><br>
+                <input type="submit" value="save console"><br><br>
+            </fieldset>
+        </form>
+        <a href="consoles.html" th:href="@{/console}">Home</a><br>
+    </body>
+</html>
