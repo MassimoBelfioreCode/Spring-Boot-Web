@@ -44,7 +44,7 @@ Move inside your project Directory and execute this command: **mvn spring-boot: 
 
 # 👁️Overview of the running GameStep Web APP
 
-![Alt text](relative%20path/to/Console.png?raw=true "Title")
+
 
 # 🚧🔜️
 
