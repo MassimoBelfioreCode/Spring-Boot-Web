@@ -2,7 +2,7 @@
 
 ## How to start creating CRUD Web App in Java using Spring-Boot
 
-# ⚙️Spring-Boot project configuration**
+# ⚙️Spring-Boot project configuration
 
 1. Download and Install VS Code for Linux (if you use a Linux distro). https://code.visualstudio.com/thank-you?dv=linux64&build=stable.
 
@@ -37,6 +37,14 @@ Click now on App Dependancies and select **Spring Web**, then click OK.
 **Click now on GENERATE button for creating your project** 🙂️
 
 n.b. Make sure that maven is correctely installed in your system, because it is necessary. If not: https://maven.apache.org/
+
+# 🔨️Build and Execute your project
+
+Move inside your project Directory and execute this command: **mvn spring-boot: run** 
+
+# 👁️Overview of the running GameStep Web APP
+
+![Alt text](relative%20path/to/Console.png?raw=true "Title")
 
 # 🚧🔜️
 
