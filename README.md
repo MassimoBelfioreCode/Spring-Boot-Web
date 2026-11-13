@@ -30,7 +30,7 @@
 
 **go to -> https://start.spring.io/**
 
-Recommended Steps: Project: select Maven, Language: select Java, Spring Boot: select v4.1.2, Project Metadata: In artifact type the project name, and use default recommended choices.
+Recommended Steps: Project: select Maven, Language: select Java, Spring Boot: select v4.1.2, Project Metadata: In artifact type the project name and for the rest use the default recommended choices.
 
 Click now on App Dependancies and select **Spring Web**, then click OK.
 
