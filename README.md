@@ -44,7 +44,6 @@ Move inside your project Directory and execute this command: **mvn spring-boot: 
 
 # 👁️Overview of the running GameStep Web APP
 
-
+<img width="1294" height="692" alt="Console" src="https://github.com/user-attachments/assets/c32cdbda-3fcf-42a7-a0a1-ba02597068ce" />
 
 # 🚧🔜️
-
